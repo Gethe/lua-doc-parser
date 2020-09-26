@@ -22,7 +22,7 @@ git config --global user.name "${GIT_NAME:-CI}"
 git clone "https://github.com/$REPO_PATH.wiki" .wiki
 
 # run the python script
-parse -o ".wiki" || exit 1
+python3 parse.py -o ".wiki" || exit 1
 
 # navigate to the output directory
 cd .wiki || exit 1
